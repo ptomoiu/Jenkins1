@@ -22,12 +22,15 @@ pipeline {
         }
         
         stage('Stage 3') {
-            script {
-                 if (var1 == 1) {
-                     echo 'Stage 3/A ...'
-                 } else {
-                     echo 'Stage 3/B ...'
-                 }
+            steps {
+                echo 'within myStage'
+                script {
+                    if (var1 == 1) {
+                        echo 'Stage 3/A'
+                    } else {
+                        echo 'Stage 3/B'
+                    }
+                }
             }
         }
     }
