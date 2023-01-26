@@ -5,13 +5,13 @@ pipeline {
         MY_ENV_VAR1 = "Hello 1"
         
         // Using returnStdout
-        MY_ENV_VAR2 = """${sh(
+        MY_ENV_VAR2 = """${bat(
                 returnStdout: true,
                 script: 'echo "clang"'
             )}"""
             
        // Using returnStatus
-        EXIT_STATUS = """${sh(
+        EXIT_STATUS = """${bat(
                 returnStatus: true,
                 script: 'exit 1'
             )}"""
