@@ -15,10 +15,10 @@ pipeline {
             steps {
                 echo 'Building...'
                 echo "${params.Parameter1} World!"
-                echo "${params.Message} World!"
-                echo "${params.TrueOrNot} World!"
-                echo "${params.YourChoice} World!"
-                echo "${params.PASSWORD} World!"
+                echo "Message=${params.Message}"
+                echo "TrueOrNot= ${params.TrueOrNot}"
+                echo "YourChoice= ${params.YourChoice}"
+                echo "PASSWORD= ${params.PASSWORD}"
             }
         }
         stage('Test') {
