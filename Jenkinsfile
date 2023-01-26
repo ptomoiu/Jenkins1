@@ -3,6 +3,11 @@ pipeline {
     
     environment { 
         MY_ENV_VAR1 = 'Hello 1'
+        // Using returnStdout
+        CC = """${sh(
+                returnStdout: true,
+                script: 'echo "clang"'
+            )}"""
     }
 
     stages {
