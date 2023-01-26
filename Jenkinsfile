@@ -1,21 +1,22 @@
 pipeline {
     agent any
-    def scmVars
+    int var1 = 0
     
     stages {
         stage('Build 1') {
             when { 
-                expression {BRANCH_NAME == "main"}
+                expression {var1 == 1}
             }
             steps {
                 echo 'Building 1 ...'
             }
         }
         stage('Build 2') {
-
+            when { 
+                expression {var1 != 1}
+            }
             steps {
-                scmVars = checkout scm
-                echo scmVars.GIT_BRANCH
+                echo 'Building 2 ...'
             }
         }
     }
