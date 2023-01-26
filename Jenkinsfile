@@ -1,6 +1,7 @@
 pipeline {
     agent any
-
+    def scmVars
+    
     stages {
         stage('Build 1') {
             when { 
@@ -13,7 +14,8 @@ pipeline {
         stage('Build 2') {
 
             steps {
-                echo "${env.BRANCH_NAME}"
+                scmVars = checkout scm
+                echo scmVars.GIT_BRANCH
             }
         }
     }
