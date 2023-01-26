@@ -15,6 +15,13 @@ pipeline {
                 returnStatus: true,
                 script: 'exit 1'
             )}"""
+
+       // Using returnStatus
+        MY_ENV_VAR4 = """${bat(
+                returnStatus: true,
+                script: 'exit hostname'
+            )}"""
+            
     }
 
     stages {
