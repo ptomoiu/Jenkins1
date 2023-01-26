@@ -27,7 +27,7 @@ pipeline {
     stages {
         stage('Build') {
             environment { 
-               MY_ENV_VAR4 = 'Hello 4'
+               MY_ENV_VAR5 = 'Hello 5'
             }
             steps {
                 echo 'Building..'
@@ -35,6 +35,7 @@ pipeline {
                 echo "MY_ENV_VAR2= ${env.MY_ENV_VAR2}"
                 echo "MY_ENV_VAR3= ${env.MY_ENV_VAR3}"
                 echo "MY_ENV_VAR4= ${env.MY_ENV_VAR4}"
+                echo "MY_ENV_VAR5= ${env.MY_ENV_VAR5}"
                 
                 echo "JAVA_HOME= ${env.JAVA_HOME}"
             }
