@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    int var1 = 0
+    var1 = 0
     
     stages {
         stage('Build 1') {
