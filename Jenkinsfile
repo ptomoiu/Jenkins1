@@ -4,20 +4,30 @@ pipeline {
     agent any
     
     stages {
-        stage('Build 1') {
+        stage('Stage 1') {
             when { 
                 expression {var1 == 1}
             }
             steps {
-                echo 'Building 1 ...'
+                echo 'Stage 1 ...'
             }
         }
-        stage('Build 2') {
+        stage('Stage 2') {
             when { 
                 expression {var1 != 1}
             }
             steps {
-                echo 'Building 2 ...'
+                echo 'Stage 2 ...'
+            }
+        }
+        
+        stage('Stage 3') {
+            script {
+                 if (var1 == 1) {
+                     echo 'Stage 3/A ...'
+                 } else {
+                     echo 'Stage 3/B ...'
+                 }
             }
         }
     }
