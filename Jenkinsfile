@@ -4,20 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building ...'
-                sh "dir"
+                echo 'Building 1'
             }
-        }
-    }
-    post {
-        always {
-            echo 'Always do this.'
-        }
-        success {
-            echo 'Do this on success.'
-        }
-        failure {
-            echo 'Do this on FAILURE.'
+            
+            steps {
+                echo 'Building 1'
+            }
         }
     }
 }
