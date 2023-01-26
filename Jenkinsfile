@@ -2,13 +2,13 @@ pipeline {
     agent any
     
     environment { 
-        MY_ENV_VAR1 = 'Hello'
+        MY_ENV_VAR1 = 'Hello 1'
     }
 
     stages {
         stage('Build') {
             environment { 
-               MY_ENV_VAR2 = 'Hello'
+               MY_ENV_VAR2 = 'Hello 2'
             }
             steps {
                 echo 'Building..'
