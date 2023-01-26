@@ -11,7 +11,7 @@ pipeline {
             )}"""
             
        // Using returnStatus
-        EXIT_STATUS = """${bat(
+        MY_ENV_VAR3 = """${bat(
                 returnStatus: true,
                 script: 'exit 1'
             )}"""
@@ -20,7 +20,7 @@ pipeline {
     stages {
         stage('Build') {
             environment { 
-               MY_ENV_VAR3 = 'Hello 3'
+               MY_ENV_VAR4 = 'Hello 4'
             }
             steps {
                 echo 'Building..'
