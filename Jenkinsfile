@@ -11,11 +11,9 @@ pipeline {
             }
         }
         stage('Build 2') {
-            when {
-               branch 'dev'
-            }
+
             steps {
-                echo 'Building 1 ...'
+                echo "${env.BRANCH_NAME}"
             }
         }
     }
