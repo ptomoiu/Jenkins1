@@ -1,6 +1,7 @@
+def var1 = 0
+
 pipeline {
     agent any
-    def var1 = 0
     
     stages {
         stage('Build 1') {
