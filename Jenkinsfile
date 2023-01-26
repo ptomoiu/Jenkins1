@@ -3,8 +3,8 @@ pipeline {
 
     stages {
         stage('Build 1') {
-            when {
-               branch 'main'
+            when { 
+                expression {env.BRANCH_NAME == "main"}
             }
             steps {
                 echo 'Building 1 ...'
