@@ -3,6 +3,7 @@ pipeline {
     
     parameters {
         string(name: 'Parameter1', defaultValue: 'Hello', description: 'This is the first parameter')
+        string(name: 'Parameter2', defaultValue: 'Hello', description: 'This is the first parameter')
     }
 
     stages {
